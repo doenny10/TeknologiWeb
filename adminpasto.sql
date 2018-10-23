@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2018 at 07:12 PM
+-- Generation Time: Jul 05, 2018 at 07:11 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -25,35 +25,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `userpasto`
+-- Table structure for table `adminpasto`
 --
 
-CREATE TABLE `userpasto` (
+CREATE TABLE `adminpasto` (
   `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
-  `username` varchar(15) NOT NULL,
-  `password` varchar(8) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `address` varchar(50) NOT NULL,
-  `gender` varchar(10) NOT NULL
+  `password` varchar(20) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `address` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `userpasto`
+-- Dumping data for table `adminpasto`
 --
 
-INSERT INTO `userpasto` (`id`, `name`, `username`, `password`, `email`, `address`, `gender`) VALUES
-(2, 'Daniel', 'admin', 'admin', 'm26416043@john.petra', 'Jl. Soekarno hatta no. 205 Surabaya', 'Male'),
-(3, 'Aldo', 'aldo', 'aldo', 'aldo@gmail.com', 'Surabaya', 'Male');
+INSERT INTO `adminpasto` (`id`, `name`, `password`, `phone`, `address`) VALUES
+(1, 'Donny', '123', 12312, 'Medaeng 90'),
+(2, 'admin', 'admin', 123, 'Surabaya');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `userpasto`
+-- Indexes for table `adminpasto`
 --
-ALTER TABLE `userpasto`
+ALTER TABLE `adminpasto`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -61,10 +59,10 @@ ALTER TABLE `userpasto`
 --
 
 --
--- AUTO_INCREMENT for table `userpasto`
+-- AUTO_INCREMENT for table `adminpasto`
 --
-ALTER TABLE `userpasto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `adminpasto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
